@@ -1,0 +1,21 @@
+h3{
+    display: flex;
+    justify-content: center;
+}
+.table{
+    display: flex;
+    justify-content: center;
+// table thead tr,table tbody tr {
+//     border: 2px solid #000;
+//     border-collapse: collapse;
+    
+    
+    // align-items: center;
+    table,th,td{
+        border: 2px solid #000;
+        border-collapse: collapse;
+        text-align: center;
+        width: 600px;
+
+    }
+}

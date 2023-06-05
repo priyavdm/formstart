@@ -1,53 +1,50 @@
-<p>form works!</p>
+<h3>form works!</h3>
 
-<form #myform="ngForm">
-    {{myform.value |json}}
-    {{aObj|json}}
-    <div class="form-group">
+<div class="form">
+<form #myform="ngForm" action="">
+    {{myform.value|json}}
+    <!-- {{aObj|json}} -->
+    <div class="form-group name">
         <label>Name</label>
         <!-- <input type="text" class="form-control" name="name" ngModel> -->
-        <input type="text" class="form-control" name="name" [ngModel]="aObj.name">
+        <!-- <input type="text" class="form-control" name="name" [ngModel]="aObj.name"> -->
+          <input type="text" class="form-control" name="name" [(ngModel)]="name">
     </div>
-    <div class="form-group">
-    <label>age</label>
+    <div class="form-group age">
+    <label>Age</label>
         <!-- <input type="text" class="form-control" name="age" ngModel> -->
-        <input type="text" class="form-control" name="age" [ngModel]="aObj.age">
+        <!-- <input type="text" class="form-control" name="age" [ngModel]="aObj.age"> -->
+        <input type="text" class="form-control" name="age" [(ngModel)]="age">
     </div>
     <!-- {{a.hobby}} -->
-    <div class="form-group">
+    <div class="form-group hobby">
         <label>Hobby</label>
-    <!-- <select name="hobby" [ngModel]="aObj.hobby">
-        <option value="Sing">Sing</option>
-        <option value="Dance">Dance</option>
-        <option value="Cook">Cook</option>
-      </select> -->
-      <select name="hobby" [ngModel]="aObj.hobby">
+      <!-- <select name="hobby" [ngModel]="aObj.hobby">
         <option value="sing">Sing</option>
         <option value="dance">dance</option>
-        <option value="cook">Cook</option>
+        <option value="cook">Cook</option> -->
+        <select name="hobby" [(ngModel)]="hobby">
+            <option value="sing">Sing</option>
+            <option value="dance">dance</option>
+            <option value="cook">Cook</option>
 
       </select>
     </div>
       
 
-    <div class="form-group">
-        <label>gender</label>
-            <!-- <input type="text" class="form-control" name="gender" ngModel> -->
-            <!-- <input type="radio" name="gender" value="male" class="form-control" [ngModel]="aObj.gender">male
-            <input type="radio"  name="gender" value="Female" class="form-control" [ngModel]="aObj.gender">female
-            <input type="radio" name="gender" value="Not need to say" class="form-control" [ngModel]="aObj.gender">not need to say -->
-            <input type="radio" name="gender" value="male" [ngModel]="aObj.gender">male
+    <div class="form-group gender">
+        <label>Gender</label>
+            <!-- <input type="radio" name="gender" value="male" [ngModel]="aObj.gender">male
             <input type="radio" name="gender" value="female" [ngModel]="aObj.gender">female
-            <input type="radio" name="gender" value="not prefer to say" [ngModel]="aObj.gender">not prefer to say
+            <input type="radio" name="gender" value="not prefer to say" [ngModel]="aObj.gender">not prefer to say -->
+            <input type="radio" name="gender" value="male" [(ngModel)]="gender">male
+            <input type="radio" name="gender" value="female" [(ngModel)]="gender">female
+            <input type="radio" name="gender" value="not prefer to say" [(ngModel)]="gender">not prefer to say
             
         </div>
-        <!-- <div class="form-group">
-            <label>Department</label>
-            <input type="checkbox" name="dept" value="CSE" class="form-control" [ngModel]="a.dept">CSE
-            <input type="checkbox" name="dept" value="IT" class="form-control" [ngModel]="a.dept">IT
-            <input type="checkbox" name="dept" value="ECE" class="form-control" [ngModel]="a.dept">ECE
-        </div> -->
-        <div>
-        <button (click)="add(myform.value)">Submit</button>
+        <div class="btn">
+        <button (click)="add()">ADD</button>
+        <button (click)="update()">Update</button>
     </div>
 </form>
+</div>
