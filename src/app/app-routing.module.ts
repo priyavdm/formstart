@@ -6,7 +6,8 @@ import { TableComponent } from './table/table.component';
 const routes: Routes = [
   {path:'form',component:FormComponent},
   {path:"table",component:TableComponent},
-  {path:"form/:id",component:FormComponent}
+  {path:"form/:id",component:FormComponent},
+  // {path:"table:id",component:TableComponent}
 ];
 
 @NgModule({
