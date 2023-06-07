@@ -26,6 +26,4 @@ export class ServiceService {
     return this.http.put(this.url+ '/delete',{id:id});
   }
   
-
-
 }
